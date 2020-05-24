@@ -147,7 +147,7 @@ taskInput.addEventListener('keyup', function onEvent(e) {
         addTask();
     }
 });
-// addButton.onclick=addTask;
+
 addButton.addEventListener("click",addTask);
 addButton.addEventListener("click",ajaxRequest);
 
