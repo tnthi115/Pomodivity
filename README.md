@@ -1,38 +1,9 @@
-MLH Localhost: Build and Deploy Your First Wesbite
-=================
+ Our website is based around a new method aimed at increasing productivity for those who struggle without the presence of concrete goals. Developed by Francesco Cirillo, the Pomodoro Technique revolves around a timer that can be adjusted to create customized time intervals to boost productivity. Made for periods of uncertainty, this website ensures that a path to accomplishment is always available.
 
-**MLH Localhost** is the best way to learn new hacker skills with your community. 
+    Procedure:
+        1) Add tasks to be completed on the To-Do List.
+        2) Choose the amount of time you would like to spend working during each interval.
+        3) Complete the tasks and then check them off as you go.
+        4) Enjoy your breaks!
 
-Find out more [about MLH Localhost](localhost.mlh.io). 
-
-Your Project
-------------
-
-### ← README.md
-
-That's this file, where you can tell people what your cool website does and how you built it.
-
-### ← index.html
-
-Where you'll write the content of your website. 
-
-### ← media-queries.css
-
-A CSS file that makes your website responsive on different screens.
-
-### ← style.css
-
-CSS files add styling rules to your content.
-
-### ← assets
-
-Drag in `assets`, like images or music, to add them to your project
-
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
-
--------------------
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
-
-\ ゜o゜)ノ
+Working without proper planning can be daunting, so let us help keep you on track. 
