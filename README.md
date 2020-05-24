@@ -1,4 +1,4 @@
- Our website is based around a new method aimed at increasing productivity for those who struggle without the presence of concrete goals. Developed by Francesco Cirillo, the Pomodoro Technique revolves around a timer that can be adjusted to create customized time intervals to boost productivity. Made for periods of uncertainty, this website ensures that a path to accomplishment is always available.
+ Our website is based around a new method aimed at increasing productivity for those who struggle without the presence of concrete goals. Developed by Francesco Cirillo, the Pomodoro Technique revolves around a timer that can be adjusted to create customized time intervals to boost productivity. Made for periods of uncertainty, this website ensures that a path to accomplishment is always available. 
 
     Procedure:
         1) Add tasks to be completed on the To-Do List.
