@@ -16,7 +16,7 @@ function countdown() {
   }
   if (paused === false && time > 0) {
     time = time - 1000;
-  } else if (paused === false && time <= 0) { // session ends, want to begin break
+  } else if (paused === false && time <= 0) {
     notificationSound.play();
     reset(isSessionInterval);
   }
@@ -46,7 +46,7 @@ function reset(interval) {
     document.body.style.backgroundImage = "url('https://cdn.glitch.com/c28e7605-7e71-4193-b3e8-c8cdb3dde127%2Fmartin-adams-YA-DFlSzXBE-unsplash.jpg?v=1590278932000')";
   } else {
     document.getElementById('whichSession').innerHTML = "Work Session!";
-    document.body.style.backgroundImage = "url('https://cdn.glitch.com/c28e7605-7e71-4193-b3e8-c8cdb3dde127%2Fmartin-adams-YA-DFlSzXBE-unsplash.jpg?v=1590278932000')";
+    document.body.style.backgroundImage = "url('https://cdn.glitch.com/0ce6487d-8cb6-4e19-95ae-4eeabfb1504a%2Fchloe-leis-Q1Ka2cD9XSY-unsplash.jpg?v=1590274103052')";
     time = sessionLength;
   }
   isSessionInterval = !interval;
@@ -55,6 +55,7 @@ function reset(interval) {
 
 function incrementSessionLength() {
   // if (sessionLength > 0 && sessionLength < 3540000) {
+    isSessionInterval = true;
     document.getElementById('sessionLength').innerHTML = parseInt(document.getElementById('sessionLength').innerHTML) + 1
     var sessionLengthText = parseInt(document.getElementById('sessionLength').innerHTML);
     if (sessionLengthText > 59) {
@@ -70,6 +71,7 @@ function incrementSessionLength() {
 function decrementSessionLength() {
   // if (sessionLength > 0 && sessionLength < 3540000) {
   //   if(sessionLength != 1) {
+    isSessionInterval = true;
     document.getElementById('sessionLength').innerHTML = parseInt(document.getElementById('sessionLength').innerHTML) - 1
     var sessionLengthText = parseInt(document.getElementById('sessionLength').innerHTML);
     if (sessionLengthText < 0) {
@@ -86,6 +88,7 @@ function decrementSessionLength() {
 
 function incrementBreakLength() {
   // if (breakLength > 0 && breakLength < 3540000 ||) {
+    isSessionInterval = false;
     document.getElementById('breakLength').innerHTML = parseInt(document.getElementById('breakLength').innerHTML) + 1;
     var breakLengthText = parseInt(document.getElementById('breakLength').innerHTML);
     if (breakLengthText > 59) {
@@ -99,6 +102,7 @@ function incrementBreakLength() {
 }
 
 function decrementBreakLength() {
+    isSessionInterval = false;
   // if (breakLength > 0 && breakLength < 3540000 || breakLength === 0) {
     document.getElementById('breakLength').innerHTML = parseInt(document.getElementById('breakLength').innerHTML) - 1;
     var breakLengthText = parseInt(document.getElementById('breakLength').innerHTML);
