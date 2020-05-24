@@ -16,7 +16,7 @@ function countdown() {
   }
   if (paused === false && time > 0) {
     time = time - 1000;
-  } else if (paused === false && time <= 0) { // session ends, want to begin break
+  } else if (paused === false && time <= 0) {
     notificationSound.play();
     reset(isSessionInterval);
   }
