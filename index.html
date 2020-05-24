@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <title>Pomodivity</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/timer-style.css">
+    <link rel="stylesheet" href="/media-queries.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  </head>
+  
+  <div class = "title_top">
+    <h1>
+      Pomodivity
+    </h1>
+    
+  </div>
+  
+    <div class = "intro">
+    <p style="text-align: justify;">
+      Our website is based around a new method aimed at increasing productivity for those who struggle without the presence of concrete goals. Developed by Francesco Cirillo, the Pomodoro Technique revolves around a timer that can be adjusted to create customized time intervals to boost productivity. Made for periods of uncertainty, this website ensures that a path to accomplishment is always available.
+      <ul>Procedure:
+    <ol> 
+        <li class = "intro_li">1) Add tasks to be completed on the To-Do List.</li>
+        <li class ="intro_li">2) Choose the amount of time you would like to spend working during each interval.</li>
+        <li class ="intro_li">3) Complete the tasks and then check them off as you go.</li>
+        <li class = "intro_li">4) Enjoy your breaks!</li>
+    </ol>
+        </ul>
+    Working without proper planning can be daunting, so let us help keep you on track.
+    </p>
+  </div>
+
+  <body onload="timerInterval()">
+    <audio id="notificationAudio">
+      <source src="https://cdn.glitch.com/bd07d81a-1961-45ef-b3a5-dd50f9d86611%2Fdone-for-you.mp3?v=1590346264936" type="audio/mpeg">
+      <source src="https://cdn.glitch.com/bd07d81a-1961-45ef-b3a5-dd50f9d86611%2Fdone-for-you.ogg?v=1590346727226" type="audio/ogg">
+    </audio>
+    <audio id="checklistAudio">
+      <source src="https://cdn.glitch.com/bd07d81a-1961-45ef-b3a5-dd50f9d86611%2Fiphone_ding.mp3?v=1590346993877" type="audio/mpeg">
+    </audio>
+    <div class="pomodoro">
+
+      <p id="whichSession">Work Session!</p>
+      <div id="clock" class="row">
+        <div class="timer"><div class="middle"></div></div>
+      </div>
+      <div class="row" id="statRow">
+        <div id="stats"><span id="pomodoroClock">
+          25:00
+          </span></div>
+      </div>
+      <div class="container" id="timerController">
+        <div class="row" id="btns">
+          <button class="btn btn-default btn-lg" id="start" onclick="startCountdown()" style="font-size: 20px;">start</button>
+          <button class="btn btn-default btn-lg" id="stop" onclick="pauseCountdown()" style="font-size: 20px;">stop</button>
+          <button class="btn btn-default btn-lg" id="clear" onclick="clearCountdown()" style="font-size: 20px;">clear</button>
+        </div>
+      </div>
+
+      <div id="breakandsession">
+
+      <div id="workSesh">  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row"><p style="font-size: 20px;">Session Length</p></div>
+          <div class="row counter">
+            <div class="col-md-4">
+              <button class="btn btn-default" id="sessDec" onclick="decrementSessionLength()">-</button>        
+            </div>
+            <div class="col-md-2">
+              <div id="session"><span id="sessionLength"> 25 </span></div>
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-default" id="sessInc" onclick="incrementSessionLength()">+</button>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+
+        <div id="breakSesh">
+        <div class="col-md-6">
+          <div class="row"><p style="font-size: 20px;">Break Length</p></div>
+          <div class="row counter">
+            <div class="col-md-4">
+              <button class="btn btn-default" id="breakDec" onclick="decrementBreakLength()">-</button>
+            </div>
+            <div class="col-md-2">
+              <div id="break"><span id="breakLength"> 5 </span></div>
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-default" id="breakInc" onclick="incrementBreakLength()">+</button>        
+            </div>
+          </div>
+        </div>
+          </div>
+      </div>
+    </div>
+    <div class="container" id="allTasks">
+      <p>
+        <label for="new-task">Add Item</label><input id="new-task" type="text"><button id="addingTaskHere">Add</button>
+      </p>
+
+      <h3>To do</h3>
+      <ul id="incomplete-tasks">
+        <li class="editMode"><input type="checkbox"><label>Go Shopping</label><input type="text" value="Be Productive!"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+
+      </ul>
+
+      <h3>Completed</h3>
+      <ul id="completed-tasks">
+      </ul>
+    </div>
+  </body>
+  <script src="/to-do.js" type="text/javascript"></script>
+  <script src="/server.js"  type="text/javascript"></script>
+</html>
