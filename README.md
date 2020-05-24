@@ -6,4 +6,4 @@
         3) Complete the tasks and then check them off as you go.
         4) Enjoy your breaks!
 
-Working without proper planning can be daunting, so let us help keep you on track. 
+Working without proper planning can be daunting, so let us help keep you on track.
